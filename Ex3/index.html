@@ -1,72 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <table width="100%" border="1">
-        <tr>
+    <table width="100%">
+        <tr class="center">
             <td colspan="9">
-                <center>
-                    <header>                    
-                        Entretenimento
-                    </header> 
-                </center>                
-            </td>            
+                <header>
+                    Entretenimento
+                </header>
+            </td>
         </tr>
 
         <tr>
             <td colspan="9">
                 <nav>
                     <ul>
-                        <li><a href=""></a>Vídeos Locais</li>
-                        <li><a href=""></a>Vídeos Incorporados</li>
-                        <li><a href=""></a>Fotos</li>
-                        <li><a href=""></a>Áudio</li>
+                        <li><a href="#locais">Vídeos Locais</a></li>
+                        <li><a href="#incorporados">Vídeos Incorporados</a></li>
+                        <li><a href="#fotos">Fotos</a></li>
+                        <li><a href="#audios">Áudios</a></li>
                     </ul>
                 </nav>
-            </td> 
+            </td>
         </tr>
 
-        <tr>
-            <td colspan="9" ><h3>Videos Locais</h3></td>
-        </tr>
-        <tr>
+        <section>
             <tr>
                 <td colspan="9">
-                    <center>
-                        <section>
-                            <video src="/Resources/Hamster.mp4" controls></video>
-                        </section>
-                    </center>
-                    
+                    <hr>
+                    <h3 class="pad" id="locais">Videos Locais</h3>
                 </td>
             </tr>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+
+            <tr class="center">
+                <td colspan="9">
+                    <video src="/Ex3/Resources/Hamster.mp4" width="512" height="384" title="Hamster" controls>Hamster</video>
+                </td>
+            </tr>
+        </section>
+
+        <section>
+            <tr>
+                <td colspan="9">
+                    <hr>
+                    <h3 class="pad" id="incorporados">Vídeos Incorporados</h3>
+                </td>
+            </tr>
+
+            <tr class="center">
+                <td colspan="4">
+                    <iframe width="512" height="400" src="https://www.youtube.com/embed/V1bFr2SWP1I?si=sKWB8qCr1DvqGGZ9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </td>
+                <td></td>
+                <td colspan="4">
+                    <iframe width="512" height="400" src="https://www.youtube.com/embed/MKUrAHOcKUI?si=PRTEpqT63Eq2iT_H"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </td>
+            </tr>
+        </section>
+
+
+        <section>
+            <tr>
+                <td colspan="9">
+                    <hr>
+                    <h3 class="pad" id="fotos">Fotos</h3>
+                </td>
+            </tr>
+
+            <tr class="center">
+                <td colspan="4"><img
+                        src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/m7.3-flare-rotated_0.jpeg?itok=PwhwPoIe"
+                        width="568" height="356" alt="sun-explosion" title="Sun Explosion">
+                </td>
+                <td></td>
+                <td colspan="4"><img src="https://media.tenor.com/8UIMuX0QCaYAAAAd/picapau-briga.gif" width="568"
+                        height="356" alt="woodpecker-fight" title="Woodpecker Fight">
+                </td>
+            </tr>
+        </section>
+
+
+        <section>
+            <tr>
+                <td colspan="9">
+                    <hr>
+                    <h3 class="pad" id="audios">Áudios</h3>
+                </td>
+            </tr>
+
+
+            <tr class="center">
+
+                <td colspan="3" class="pad">
+                    <audio src="\Ex3\Resources\Discovery.mp3" controls title="Discovery" alt="Discovery"></audio>
+                </td>
+                <td colspan="3"></td>
+                <td colspan="3" class="pad1">
+                    <audio src="\Ex3\Resources\Space.mp3" controls title="Space" alt="Space"> </audio>
+                </td>
+            </tr>
+        </section>
+
     </table>
-    
 </body>
+
 </html>

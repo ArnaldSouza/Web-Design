@@ -1,12 +1,28 @@
 header{
-    font-size: 50px;
+    font-size: 60px;      
+    background-color: #AA85D2;    
 }
 
 nav li {
     display: inline;
-    margin: 0 0 0 15px;    
+    margin: 0 0 0 10px;    
 }
 
-body{
-    font-family:    Roboto;
+body{ 
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color:#ffffff
+}
+
+.center{
+    text-align: center;
+}
+
+.pad{
+    font-size: 15px;   
+    padding-left:60px;    
+}
+
+.pad1{
+    padding-right:60px;
 }
