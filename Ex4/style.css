@@ -1,0 +1,15 @@
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+h1{
+    font-size:50px;
+    padding-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    padding-left:40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
