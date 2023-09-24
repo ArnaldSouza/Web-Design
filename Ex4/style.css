@@ -1,15 +1,37 @@
-nav li{
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Oswald:wght@500&family=Roboto:wght@700&display=swap');
+
+nav li {
     display: inline;
     margin: 0 0 0 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1{
-    font-size:50px;
-    padding-left: 20px;
+a:link {
+    color: #363636}
+
+a:visited {
+    color: #00ff00
+}
+
+a:hover {
+    color: #a25dd88f
+}
+
+a:active {
+    color: #e34f5c;
+}
+
+
+h1 {
+    font-size: 50px;
+    padding-left: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2{
-    padding-left:40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+h2 {
+    padding-left: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
