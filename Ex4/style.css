@@ -1,42 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Martian+Mono:wght@800&family=Oswald:wght@500&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sumana&display=swap');
+
+@media (max-width: 450px) {  
+    body{
+        background-color: #fffb00;
+    }
+    a:link {
+        color: #ff0000;
+    }
+    
+    a:visited {
+        color: #000000;
+    }
+    
+    a:hover {
+        color: #610000;
+    }
+    
+    a:active {
+        color: #7e000a;
+    }    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {  
+    body{
+        background-color: #bbff00;
+    }
+    
+    nav li {
+        display: inline;
+        margin: 0 0 0 15px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Martian Mono', monospace;        
+        background-color: #ff0000;   
+    }   
+}
+
 nav li {
     display: inline;
     margin: 0 0 0 15px;
-    
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Martian Mono', monospace;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;     
+}
+
+body{
+    background-color: #ff0000;
 }
 
 a:link {
-    color: #363636}
+    color: #ffffff
+}
 
 a:visited {
-    color: #00ff00
+    padding: 2px 10px; 
+    display: inline-block;    
+    color:#ffffff;
+    text-decoration: underline overline dotted #ff0000; 
+    border-bottom:3px solid #EDEDED;
 }
 
 a:hover {
-    color: #a25dd88f
-}
+  background-color:#fc9700;
+  color: #fffb00;
+  border-bottom:3px solied #ffffff;
+  border-radius: 5px;
+}   
 
 a:active {
-    color: #e34f5c;
+    color: #7e000a;
 }
 
-img{
-    padding-left: 100px;
+p{
+    padding-left: 125px;
+    font-family: 'Anek Odia', sans-serif;
+    color:#fffb00
+}
+
+img {
+    padding-left: 75px;
+    border-radius: 25px;
 }
 
 h1 {
     font-size: 50px;
-    padding-left: 30px;    
+    padding-left: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#ffee00
 }
 
 h2 {
-    padding-left: 50px;    
+    padding-left: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color:#ffffff
 }
 
-h3{
+h3 {
     padding-left: 75px;
-
+    font-family: 'Marvel', sans-serif;
+    color:#ffffff
 }
 
-.fazer{
+h4{
+    font-family: 'Sumana', serif;
+    color:#ffffff    
+}
+
+.fazer {
     padding-left: 100px;
+    font-family: 'Anek Odia', sans-serif;
+    color:#ffffff
 }
