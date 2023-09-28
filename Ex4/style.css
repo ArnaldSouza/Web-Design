@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sumana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Sumana&display=swap');
 
 @media (max-width: 450px) {  
     body{
@@ -83,7 +84,7 @@ p{
 }
 
 img {
-    padding-left: 75px;
+    padding-left: 0px;
     border-radius: 25px;
 }
 
