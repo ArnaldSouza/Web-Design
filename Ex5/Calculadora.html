@@ -8,12 +8,34 @@
 </head>
 
 <style>
+    p {
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    input {
+        border-radius: 3px;
+        border-width: 1px;
+        height: 30px;
+    }
+
+    button {
+        border-radius: 3px;
+        background-color: #248eff;
+        color: #ffffff;
+        border-color: #248eff;
+        padding: 7px;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
     .divisao {
         display: inline-block;
     }
 
-    button:{
-       padding-top: 15px;
+    #resultado {
+        width: 350px;
     }
 </style>
 
@@ -27,17 +49,17 @@
         </div>
         <div class="divisao">
             <p>Número 2</p>
-            <input name="Número 2" id="valor2" placeholder="Insira o segundo valor">
+            <input name="Número 2" id="valor2" placeholder="Insira o segundo valor" >
         </div>
 
         <div>
             <p>Resultado</p>
-            <input type="number" name="Resultado" id="resultado" placeholder="Resultado" readonly>
+            <input type="number" id="resultado" placeholder="Resultado" readonly>
         </div>
         <br>
         <div>
-            <button type="button">Somar valores</button>
-            <button type="button">Limpar dados</button>
+            <button type="button" id="soma" onclick="somar()">Somar valores</button>
+            <button type="button" onclick="limparEntrada()">Limpar dados</button>
         </div>
 
 
@@ -46,8 +68,29 @@
 
 
 <script>
-    var v1 = document.getElementById("valor1");
-    var v2 = document.getElementById("valor2")
+    function somar() {
+        var valor1 = parseInt(document.getElementById("valor1").value, 10);
+        var valor2 = parseInt(document.getElementById("valor2").value, 10);
+        
+        if (!isNaN(valor1) && !isNaN(valor2)) {
+            var resultado = valor1 + valor2;
+            document.getElementById("resultado").value = resultado;
+        }       
+    }
+
+    function validar(){
+        var valor1 = document.getElementById("valor1");
+        
+
+    }
+
+    function limparEntrada() {
+        document.getElementById('valor1').value = '';
+        document.getElementById('valor2').value = '';
+        document.getElementById('resultado').value = '';
+        document.getElementById('sum').disabled = true;
+    }
+
 </script>
 
 </html>
