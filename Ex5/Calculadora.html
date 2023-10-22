@@ -75,14 +75,14 @@
         if (!isNaN(valor1) && !isNaN(valor2)) {
             var resultado = valor1 + valor2;
             document.getElementById("resultado").value = resultado;
-        }       
-    }
-
-    function validar(){
-        var valor1 = document.getElementById("valor1");
+        }
         
-
+        if (isNaN(valor1) || isNaN(valor2)) {
+            document.getElementById("resultado").disabled = true;
+        }
     }
+
+    
 
     function limparEntrada() {
         document.getElementById('valor1').value = '';
