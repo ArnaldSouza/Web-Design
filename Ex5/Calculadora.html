@@ -8,7 +8,6 @@
 </head>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
     p {
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -19,25 +18,27 @@
         height: 30px;
     }
 
-    button{
+    button {
         border-radius: 3px;
         background-color: #248eff;
         border-color: #248eff;
         color: #ffffff;
         padding: 7px;
-        cursor: pointer;        
+        cursor: pointer;
+    }
+
+    input.blue-bg {
+        background-color: lightblue;
     }
 
     .divisao {
         display: inline-block;
     }
 
-    #resultado {
-        width: 350px; 
-        font-weight: bold; 
-        font-family: 'Tilt Neon', sans-serif;
+    #result {
+        width: 350px;
+        font-weight: bold;
     }
-
 </style>
 
 </html>
@@ -46,23 +47,24 @@
     <form>
         <div class="divisao">
             <p>Número 1</p>
-            <input name="Número 1" id="valor1" placeholder="Insira o primeiro valor">
+            <input type="text" id="valor1" placeholder="Insira o primeiro valor" oninput="validarEntrada()">
+            <button type="button" onclick="gerarNumero('valor1')">Gerar Número</button>
         </div>
         <div class="divisao">
             <p>Número 2</p>
-            <input name="Número 2" id="valor2" placeholder="Insira o segundo valor" >
+            <input type="text" id="valor2" placeholder="Insira o segundo valor" oninput="validarEntrada()">
+            <button type="button" onclick="gerarNumero('valor2')">Gerar Número</button>
         </div>
 
         <div>
             <p>Resultado</p>
-            <input type="number" id="resultado" placeholder="Resultado" readonly>
+            <input id="result" placeholder="Resultado" readonly>
         </div>
         <br>
         <div>
-            <button type="button" id="soma" onclick="somar()">Somar valores</button>
-            <button type="button" id="clean" onclick="limparEntrada()">Limpar dados</button>
+            <button type="button" onclick=somar() id="soma" disabled>Somar valores</button>
+            <button type="button" onclick=limparEntrada()>Limpar dados</button>
         </div>
-
 
     </form>
 </body>
@@ -70,48 +72,58 @@
 
 <script>
     function somar() {
-        var valor1 = parseInt(document.getElementById("valor1").value, 10);
-        var valor2 = parseInt(document.getElementById("valor2").value, 10);
-        
-        if (!isNaN(valor1) && !isNaN(valor2)) {
-            var resultado = valor1 + valor2;
-            document.getElementById("resultado").value = resultado;
-        }
-        
-        if (isNaN(valor1) || isNaN(valor2)) {
-            document.getElementById("soma").disabled = true;
-        }
+        const valor1 = parseInt(document.getElementById('valor1').value);
+        const valor2 = parseInt(document.getElementById('valor2').value);
+        const resultado = valor1 + valor2;       
+        document.getElementById('result').value = resultado;
     }
-
-    window.onload = function validar(){       
-
-        var valor1 = parseInt(document.getElementById("valor1").value, 10);
-        var valor2 = parseInt(document.getElementById("valor2").value, 10);        
-
-        if(isNaN(valor1)){
-            document.getElementById("valor1").style.border = "2px solid red";
-        }
-
-        if(isNaN(valor2)){
-            document.getElementById("valor2").style.border = "2px solid red";
-        }
-
-        if(valor1 > valor2){
-            document.getElementById("valor1").style.backgroundColor = "#84bfff";
-        }
-
-        if(valor1 < valor2){
-            document.getElementById("valor2").style.backgroundColor = "#84bfff";
-        }
-    }
-    
 
     function limparEntrada() {
         document.getElementById('valor1').value = '';
         document.getElementById('valor2').value = '';
-        document.getElementById('resultado').value = '';
+        document.getElementById('result').value = '';
+        document.getElementById('valor1').disabled = false;
+        document.getElementById('valor2').disabled = false;
+        document.getElementById('soma').disabled = true;
+        document.getElementById('valor1').style.backgroundColor = "";
+        document.getElementById('valor2').style.backgroundColor = "";
+        document.getElementById('valor1').style.border = "";
+        document.getElementById('valor2').style.border = "";
+    }
+
+    function validarEntrada() {
+        const valor1 = document.getElementById('valor1').value;
+        const valor2 = document.getElementById('valor2').value;
+
+        if (valor1 !== '' && valor2 !== '' && !isNaN(valor1) && !isNaN(valor2)) {
+            document.getElementById('soma').disabled = false;
+
+            if (valor1 > valor2) {
+                document.getElementById('valor1').style.backgroundColor = "#79d1ff";
+            }
+
+            if (valor1 < valor2) {
+                document.getElementById('valor2').style.backgroundColor = "#79d1ff";
+            }
+        } else {
+            document.getElementById('soma').disabled = true;
+
+            if (isNaN(valor1)) {
+                document.getElementById('valor1').style.border = "2px solid red";
+            }
+
+            if (isNaN(valor2)) {
+                document.getElementById('valor2').style.border = "2px solid red";
+            }
+        }
+    }
+
+    function gerarNumero(idCampo){
+        const numRnd = Math.floor(Math.random() * 150);
+        document.getElementById(idCampo).value = numRnd;
+        document.getElementById(idCampo).disabled = true;
+        validarEntrada();
     }
 
 </script>
-
 </html>
