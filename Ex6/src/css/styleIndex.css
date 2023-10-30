@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&display=swap');
+
+#cabecalho {
+    display: flex;
+}
+
+#logo {
+    font-family: 'Chango', sans-serif;
+    background: -webkit-linear-gradient(left, rgb(255, 0, 0) 50%, rgb(255, 191, 0) 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+#donos {
+    font-family: 'Corben', serif;
+    text-align: center;
+}
+
+#cardapio {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Corben', serif;
+    padding-left: 45px;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Mitr', sans-serif;
+    color: red;
+    padding-left: 450px;
+    height: 50px;
+}
+
+hr {
+    position: relative;
+    border: none;
+    height: 12px;
+    background: rgb(255, 145, 0);
+    margin-bottom: 0px;
+}
