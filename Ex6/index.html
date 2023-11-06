@@ -1,281 +1,220 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lanchonete CAGV</title>
-    <link rel="stylesheet" href="./src/css/styleIndex.css">
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <script src="./src/js/button.js" type="text/javascript"></script>
+    <title>Menu da Lanchonete</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript" src="./src/js/script.js"></script>
 </head>
 
 <body>
-    <div id="cabecalho">
-        <div>
-            <h1 id="logo">CAVG</h1>
+    <header>
+        <div id="header">
+            <center>
+                <img src="./src/img/logo.png" alt="Logotipo da Lanchonete" width="200px" height="200px">
+            </center>
         </div>
 
-        <div>
-            <h1 class="titulo">Lanchonete CAGV</h1>
+        <div id="owners">
+            <p>Arnald Souza,Christopher Kevin Costa,Gustavo Brandao,Victor Soares </p>
+
         </div>
-    </div>
+    </header>
 
-    <hr>
+    <center>
+        <div id="menu">
 
-    <h4 id="donos">Donos:
-        Arnald Souza,
-        Christopher Kevin,
-        Gustavo Brandao,
-        Victor Soares
-    </h4>
+            <center>
+                <h1 class="products">Hambúrgueres:</h1>
+            </center>
 
-    <hr>
+            <div class="menu-item">
+                <h2 class="titulo">Hambúrguer Clássico</h2>
+                <img src="./src/img/xburguer.jpg" alt="Hamburguer Clássico" class="lanche">
+                <p class="textos">Ingredientes: Nosso hambúrguer clássico feito com carne suculenta, queijo cheddaR,
+                    bacon e nosso molho
+                    exclusivo
+                    especial.</p>
+                <p class="textos">Preço: R$15,99</p>
+                <h3 class="textos">Adicionais:</h3>
 
+                <div>
+                    <p class="item">Hambúrguer:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-    <h1 id="cardapio">Cardápio</h1>
+                <div>
+                    <p class="item" id="queijo">Queijo:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-    <div class="menu">
-        <h2>Lanches</h2>
-        <div class="item" data-id="1">
-            <h2>X-Burguer</h2>
-            <img src="/src/img/xburguer.jpg" alt="X-Burguer">
-            <p>Hambúrguer, queijo, bacon, salada e molho.</p>
-            <p>R$ 20,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
+                <div>
+                    <p class="item" id="bacon">Bacon:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
+                <button onclick="hambClassico()" type="button" class="btn btn-primary btn-sm">Adicionar ao
+                    Carrinho</button>
 
-        <div class="item" data-id="2">
-            <h2>X-Frango</h2>
-            <img src="./src/img/xfrango.jpg" alt="X-Frango">
-            <p>Filé de frango, queijo, bacon, salada e molho.</p>
-            <p>R$ 25,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item" data-id="3">
-            <h2>X-Salada</h2>
-            <img src="./src/img/xsalada.jpeg" alt="X-Salada">
-            <p>Hambúrguer, queijo, salada e molho.</p>
-            <p>R$ 15,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item" data-id="4">
-            <h2>X-Tudo</h2>
-            <img src="./src/img/xtudo.jpg" alt="X-Tudo">
-            <p>Hambúrguer, queijo, bacon, salada, ovo e molho.</p>
-            <p>R$ 30,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-    </div>
+            </div>
 
 
-    <div class="bebidas">
-        <h2>Bebidas</h2>
+            <div class="menu-item">
+                <h2 class="titulo">Cheeseburguer Duplo</h2>
+                <img src="./src/img/double-x-bacon.jpg" alt="Cheeseburguer Duplo" class="lanche">
+                <p class="textos">Ingredientes: Dois hambúrgueres, o dobro de queijo cheddar, bacon e nosso molho
+                    exclusivo.</p>
+                <p class="textos">Preço: R$25,99</p>
+                <h3 class="textos">Adicionais:</h3>
 
-        <div class="item-bebida">
-            <h4>Coca-Cola</h4>
-            <img src="./src/img/coca.webp" alt="coca">
-            <p>R$ 4,50</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>           
-        </div>
+                <div>
+                    <p class="item">Hambúrguer:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-        <div class="item-bebida">
-            <h4>Pepsi</h4>
-            <img src="./src/img/pepsi.webp" alt="pepsi">
-            <p>R$ 4,00</p>
-            <button class="minus">-</button>
-            <span class="display">8</span>
-            <button class="plus">+</button>
-        </div>
-        
-        <div class="item-bebida">
-            <h4>Guaraná</h4>
-            <img src="./src/img/guarana.png" alt="guarana">
-            <p>R$ 4,20</p>
-            <button class="minus">-</button>
-            <span class="display">12</span>
-            <button class="plus">+</button>
-        </div>
+                <div>
+                    <p class="item" id="queijo">Queijo:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-        <div class="item-bebida">
-            <h4>Fanta Laranja</h4>
-            <img src="./src/img/fanta.jpg" alt="fanta laranja">
-            <p>R$ 4,00</p>
-            <button class="minus">-</button>
-            <span class="display">8</span>
-            <button class="plus">+</button>
-        </div>
-        
-        <div class="item-bebida">
-            <h4>Suco de Laranja</h4>
-            <img src="./src/img/sucolaranja.jpeg" alt="coca">
-            <p>R$ 5,00</p>
-            <button class="minus">-</button>
-            <span class="display">6</span>
-            <button class="plus">+</button>
-        </div>
-        
-        <div class="item-bebida">
-            <h4>Água Mineral</h4>
-            <img src="./src/img/agua.jpg" alt="coca">
-            <p>R$ 2,50</p>
-            <button class="minus">-</button>
-            <span class="display">20</span>
-            <button class="plus">+</button>
-        </div>      
-    </div>
+                <div>
+                    <p class="item" id="bacon">Bacon:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-    <div class="combo">
-        <h2>Combos</h2>
-        <br>
-        <h3>Faça seu próprio lanche</h3>
+                <button onclick="hambDuplo()" type="button" class="btn btn-primary btn-sm">Adicionar ao
+                    Carrinho</button>
 
-        <div class="item-combo">
-            <h4>Pão com gergelim</h4>
-            <p>R$ 1,50</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>            
-        </div>
+            </div>
+            <div class="menu-item">
+                <h2 class="titulo">Cheese Salada</h2>
+                <img src="./src/img/salada2.jpg" alt="Cheese Salada" class="lanche">
+                <p class="textos">Ingredientes: Hambúrgueres, queijo derretido, alface, tomate, cebola roxa e nosso
+                    molho exclusivo.
+                </p>
+                <p class="textos">Preço: R$20,99</p>
+                <h3 class="textos">Adicionais:</h3>
 
-        <div class="item-combo">
-            <h4>Pão australiano</h4>
-            <p>R$ 1,50</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>            
-        </div>
+                <div>
+                    <p class="item">Hambúrguer:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
 
-        <div class="item-combo">
-            <h4>Pão Francês</h4>
-            <p>R$ 1,50</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>            
+                <div>
+                    <p class="item" id="queijo">Queijo:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
+
+                <div>
+                    <p class="item" id="bacon">Bacon:</p>
+                    <div class="add">
+                        <input class="quant" placeholder="0" type="number" min="0">
+                    </div>
+                </div>
+                <button onclick="hambSalada()" type="button" class="btn btn-primary btn-sm">Adicionar ao
+                    Carrinho</button>
+
+            </div>
+
+            <center>
+                <h1 class="products">Acompanhamentos:</h1>
+            </center>
+
+            <div class="menu-item">
+                <h2 class="titulo">Batata Frita</h2>
+                <img src="./src/img/batata.webp" alt="Batata Frita" class="lanche">
+                <p class="textos">Ingredientes: Batata Frita com Cheddar e Bacon.</p>
+                <p class="textos">Preço: R$15,99</p>
+                <button onclick="batata()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="menu-item">
+                <h2 class="titulo">Onion Rings</h2>
+                <img src="./src/img/onion rings.jpg" alt="Onion Rings" class="lanche">
+                <p class="textos">Ingredientes: Cebola Frita e Molho da Casa.</p>
+                <p class="textos">Preço: R$20,99</p>
+                <button onclick="onion()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+            </div>
+            <div class="menu-item">
+                <h2 class="titulo">Nuggets</h2>
+                <img src="./src/img/nuggets.jpeg" alt="Nuggets" class="lanche">
+                <p class="textos">Ingredientes: Nuggets com Molho Rose e Ketchup.</p>
+                <p class="textos">Preço: R$25,99</p>
+                <button onclick="nugget()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+            </div>
         </div>
 
-        
-        <div class="item-combo">
-            <h4>Queijo</h4>
-            <p>R$ 2,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>            
+        <center>
+            <h1 class="products">Bebidas:</h1>
+        </center>
+
+        <div class="menu-item">
+            <h2 class="titulo">Coca-Cola</h2>
+            <img src="./src/img/coca cola.jpg" alt="Coca-cola" class="refri">
+            <p class="textos">Preço: R$5,90</p>
+            <button onclick="coca()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="item-combo">
-            <h4>Bacon</h4>
-            <p>R$ 3,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
+        <div class="menu-item">
+            <h2 class="titulo">Guaraná</h2>
+            <img src="./src/img/guarana.png" alt="Guarana" class="refri">
+            <p class="textos">Preço: R$5,90</p>
+            <button onclick="guarana()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="item-combo">
-            <h4>Salsicha</h4>
-            <p>R$ 5,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
+        <div class="menu-item">
+            <h2 class="titulo">Pepsi</h2>
+            <img src="./src/img/pepsi.png" alt="Pepsi" class="refri">
+            <p class="textos">Preço: R$5,90</p>
+            <button onclick="pepsi()" type="button" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+        </div>
         </div>
 
-        <div class="item-combo">
-            <h4>Calabresa</h4>
-            <p>R$ 1,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
+        <hr>
+
+
+        <div id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul id="itens-carrinho"></ul>
+            <p>Total: R$ <span id="total-carrinho">0.00</span></p>
         </div>
 
-        <div class="item-combo">
-            <h4>Alface</h4>
-            <p>R$ 0,25</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
+        <button onclick="removerUltimoItemDoCarrinho()" type="button" class="btn btn-danger" id="btn">Remover</button>
 
-        <div class="item-combo">
-            <h4>Cebola</h4>
-            <p>R$ 0,40</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
+        <form action="resumo.html" method="get" id="carrinho-form">
+            <input type="hidden" name="carrinho-itens" id="carrinho-itens-input">
+            <input type="hidden" name="total-carrinho" id="total-carrinho-input">
+            <button type="submit" class="btn btn-success">Finalizar Compra</button>
+        </form>
 
-        <div class="item-combo">
-            <h4>Hambúrguer</h4>
-            <p>R$ 5,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item-combo">
-            <h4>Tomate</h4>
-            <p>R$ 1,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item-combo">
-            <h4>Picles</h4>
-            <p>R$ 0,8</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item-combo">
-            <h4>Cheddar</h4>
-            <p>R$ 2,50</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
-
-        <div class="item-combo">
-            <h4>Ovo</h4>
-            <p>R$ 3,00</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>            
-        </div>
-
-        <div class="item-combo">
-            <h4>Maionese</h4>
-            <p>R$ 0,25</p>
-            <button class="minus">-</button>
-            <span class="display">10</span>
-            <button class="plus">+</button>
-        </div>
+        <footer>
+            <h5>2023/CP100TIN1</h5>
+        </footer>
+    </center>
 
 
-    </div>
-
-    <form action="/finalizar" method="post">
-        <input type="hidden" name="pedidos" value="">
-        <input type="submit" value="Finalizar">
-    </form>
-
-    <hr>
-
-    <footer>
-        <h5>2023/CP100TIN1</h5>
-    </footer>
 </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 
 </html>

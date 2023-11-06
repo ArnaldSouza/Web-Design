@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Corben&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+#owners {
+    font-family: 'Corben', serif;
+    color: #ffffff;
+    padding-left: 25px;
+}
+
+#bacon {
+    padding-right: 39.5px;
+}
+
+#queijo {
+    padding-right: 36.5px;
+}
+
+#btn{
+    margin: 25px;
+    padding: 10px;
+    align-items: center;
+}
+
+#carrinho {
+    margin-top: 50px;
+    font-family: 'Crete Round', serif;
+    color: #001F3F;
+}
+
+#itens-carrinho {
+    font-family: 'Asap', sans-serif;
+    color: #000000;
+    list-style: none;
+}
+
+.total {
+    color: #000000;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.titulo {
+    font-family: 'Anton', sans-serif;
+    color: #253453;
+    border: 2px solid #FFA500;
+    padding: 2px
+}
+
+.textos {
+    font-family: 'Asap', sans-serif;
+    color: #000000;
+}
+
+.products {
+    color: #001F3F;
+    background-color: #ffffff;
+    font-family: 'Crete Round', serif;
+    padding-top: 50px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.lanche {
+    width: 300px;
+    height: 200px;
+}
+
+.add {
+    display: inline-block;
+    margin: 10px;
+}
+
+.item {
+    display: inline;
+    width: 100%;
+    margin-left: 6px;
+    color: #000000;
+}
+
+.quant {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.refri {
+    width: 165px;
+    height: 305px;
+}
+
+button {
+    display: block;
+    width: 100px;
+    color: #ffffff;
+}
+
+header {
+    background-color: #253453;
+}
