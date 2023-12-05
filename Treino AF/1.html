@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Média de dois valores</title>
+</head>
+
+<body>
+    <h1>Média de dois valores</h1>
+    <input type="text" id="valor1" placeholder="Valor 1">
+    <input type="text" id="valor2" placeholder="Valor 2">
+    <button onclick="calcularMedia()">Calcular</button>
+    <label id="media"></label>
+</body>
+
+<script>
+    function calcularMedia() {
+        //Receba dois valores (caixas de texto) e exiba o resultado da média numa label.
+
+        let valor1 = document.getElementById("valor1").value;
+        let v1 = parseInt(valor1);
+        let valor2 = document.getElementById("valor2").value;
+        let v2 = parseInt(valor2);
+        let media = (v1 + v2) / 2;
+        document.getElementById("media").innerHTML = media;
+    }      
+</script>
+
+</html>
